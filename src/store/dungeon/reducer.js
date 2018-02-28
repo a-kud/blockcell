@@ -1,10 +1,5 @@
-
 const initialState = {
-  health: 100,
-  weapon: 'fists',
-  attack: 7,
-  level: 1,
-  experience: 0
+  dungeon: 1
 }
 
 export default function reduce (state=initialState, action) {
