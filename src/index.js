@@ -9,7 +9,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 import * as reducers from './store/reducers'
 
-const store = createStore(combineReducers(reducers))
+const store = createStore(
+  combineReducers(reducers),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // remove in production
+)
 
 ReactDOM.render(
   <Provider store={store}> 
