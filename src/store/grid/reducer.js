@@ -9,15 +9,20 @@ function generateCoordinatesKeys () {
   return keys
 }
 
-const coordinateNames = generateCoordinatesKeys()
+function generateInitialState () {
+  const coordinateNames = generateCoordinatesKeys()
+  const initialState = {cellsByCoordinates: {}}
+  
+  for (const coordinatePair of coordinateNames) {
+    initialState.cellsByCoordinates[coordinatePair] = {type: 'stone'}
+  }
 
-const initialState = {cellsByCoordinates: {}}
+  return initialState
+}
 
-coordinateNames.map((coordinatePair) => {
-  initialState.cellsByCoordinates[coordinatePair] = {type: 'stone'}
-})
 
-export default function reduce (state=initialState, action) {
+
+export default function reduce (state=generateInitialState(), action) {
   switch (action.type) {
     default: return state
   }
