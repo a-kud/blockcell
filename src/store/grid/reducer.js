@@ -27,3 +27,8 @@ export default function reduce (state=generateInitialState(), action) {
     default: return state
   }
 }
+
+// Selectors
+export function getCellsByCoordinates (state) {
+  return state.grid.cellsByCoordinates
+}
