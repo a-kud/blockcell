@@ -8,7 +8,9 @@ class Cell extends Component {
   )
 
   render () {
-    renderCellByCoordinates(this.props.coordinatePair)
+   return this.renderCellByCoordinates(this.props.coordinatePair)
   }
 
 }
+
+export default Cell
