@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 
 class Cell extends Component {
-  renderCellByCoordinates = (coordinatePair) => (
-    <div key={coordinatePair}>
-      {/* to be implemented */}
-    </div>
+  renderCellByCoordinates = coordinates => (
+    Object.keys(coordinates).map(coordinatePair => 
+      (
+        <div 
+          key={coordinatePair}
+          className={`cell ${coordinatePair.type}`} 
+        >
+          Cell
+        </div>
+      )
+    )
   )
 
   render () {
-   return this.renderCellByCoordinates(this.props.coordinatePair)
+   return this.renderCellByCoordinates(this.props.cellsByCoordinates)
   }
 
 }
