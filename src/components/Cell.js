@@ -5,7 +5,7 @@ class Cell extends Component {
     Object.keys(coordinates).map((coordinatePair) => (
         <div 
           key={coordinatePair}
-          className={coordinates[coordinatePair].type} 
+          className={`cell ${coordinates[coordinatePair].type}`} 
         >
           Cell
         </div>
@@ -14,7 +14,11 @@ class Cell extends Component {
   )
 
   render () {
-   return this.renderCellByCoordinates(this.props.cellsByCoordinates)
+   const cellsMap = this.renderCellByCoordinates(
+     this.props.cellsByCoordinates
+    )
+
+    return cellsMap
   }
 
 }
