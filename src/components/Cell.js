@@ -2,11 +2,10 @@ import React, { Component } from 'react'
 
 class Cell extends Component {
   renderCellByCoordinates = coordinates => (
-    Object.keys(coordinates).map(coordinatePair => 
-      (
+    Object.keys(coordinates).map((coordinatePair) => (
         <div 
           key={coordinatePair}
-          className={`cell ${coordinatePair.type}`} 
+          className={coordinates[coordinatePair].type} 
         >
           Cell
         </div>
