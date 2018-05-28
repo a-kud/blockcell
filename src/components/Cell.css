@@ -1,6 +1,6 @@
 .cell {
-  width: 1rem;
-  height: 1rem;
+  width: var(--cell-length);
+  height: var(--cell-length);
   border: 1px solid gray;
   background-color: lightgrey;
 }
