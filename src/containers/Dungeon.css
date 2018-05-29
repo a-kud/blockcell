@@ -1,6 +1,6 @@
 .dungeon-grid {
   display: flex;
   flex-flow: row wrap;
-  width: calc((var(--cell-length) + 2px) * 10);
+  width: calc((var(--cell-length) + 2px) * 40);/*google to refactor cons dungeon width and height from js to cs */
   border: 1px solid gray;
 }

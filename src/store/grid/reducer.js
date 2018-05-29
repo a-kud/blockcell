@@ -1,8 +1,10 @@
+const DUNGEON_WIDTH = 40
+const DUNGEON_HEIGHT = 25
 
 function generateCoordinatesKeys () {
   let keys = []
-  for (let x=0; x<10; x += 1) {
-    for (let y=0; y<10; y += 1) {
+  for (let x = 0; x < DUNGEON_WIDTH; x += 1) {
+    for (let y = 0; y < DUNGEON_HEIGHT; y += 1) {
       keys.push(`x${x}y${y}`)
     }
   }
