@@ -1,1 +1,6 @@
-/* to be implemented */
+.dungeon-grid {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc((var(--cell-length) + 2px) * 10);
+  border: 1px solid gray;
+}
