@@ -1,5 +1,5 @@
-const DUNGEON_WIDTH = 40
-const DUNGEON_HEIGHT = 25
+const DUNGEON_WIDTH = 80
+const DUNGEON_HEIGHT = 45
 
 function generateCoordinatesKeys () {
   let keys = []
