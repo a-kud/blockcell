@@ -8,7 +8,9 @@ import './Dungeon.css'
 class Dungeon extends Component {
   render () {
     return (
-      <div className='dungeon-grid'>
+      <div className='dungeon-grid'
+      style={{width: `calc((var(--cell-length) + 2px) * ${this.props.dungeonHeight}`}}
+      >
         <Cell cellsByCoordinates={this.props.cellsByCoordinates}/>
       </div>
     )
@@ -16,7 +18,8 @@ class Dungeon extends Component {
 }
 
 const mapStateToProps = state => ({
-  cellsByCoordinates: gridSelectors.getCellsByCoordinates(state)
+  cellsByCoordinates: gridSelectors.getCellsByCoordinates(state),
+  dungeonHeight: gridSelectors.getDungeonHeight(state)
 })
 
 export default connect(mapStateToProps)(Dungeon)

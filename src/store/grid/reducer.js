@@ -18,6 +18,8 @@ function generateInitialState () {
   for (const coordinatePair of coordinateNames) {
     initialState.cellsByCoordinates[coordinatePair] = {type: 'stone'}
   }
+  initialState.dungeonWidth = 80
+  initialState.dungeonHeight = 45
 
   return initialState
 }
@@ -33,4 +35,12 @@ export default function reduce (state=generateInitialState(), action) {
 // Selectors
 export function getCellsByCoordinates (state) {
   return state.grid.cellsByCoordinates
+}
+
+export function getDungeonWidth (state) {
+  return state.grid.dungeonWidth
+}
+
+export function getDungeonHeight (state) {
+  return state.grid.dungeonHeight
 }
